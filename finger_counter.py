@@ -1,7 +1,7 @@
 import cv2
 import mediapipe as mp
 
-
+#captura
 video = cv2.VideoCapture(0)
 hand = mp.solutions.hands
 Hand = hand.Hands(max_num_hands=2)
