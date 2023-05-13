@@ -4,7 +4,7 @@ import mediapipe as mp
 #captura
 video = cv2.VideoCapture(0)
 hand = mp.solutions.hands
-Hand = hand.Hands(max_num_hands=2)
+Hand = hand.Hands(max_num_hands=1)
 mpDraw = mp.solutions.drawing_utils
 
 while True:
