@@ -1,19 +1,20 @@
 import requests
 
-tListAdress = []
+ListAdress     = []
+ListPostalCode = ['01153000','20050000','70714020']
 
-tListPostalCode = ['01153000','20050000','70714020']
+for PostalCode in ListPostalCode:
 
-for PostalCode in tListPostalCode:
+    URL     = 'https://viacep.com.br/ws/{}/json/'.format(PostalCode)
 
-    tURL = 'https://viacep.com.br/ws/{}/json/'.format(PostalCode)
+    Request = requests.get(URL)
 
-    tRequest = requests.get(tURL)
+    Adress  = Request.json()
 
-    tAdress = tRequest.json()
+    # print(tAdress) 
 
-    tListAdress.append([tAdress["cep"],tAdress["logradouro"],tAdress["complemento"],tAdress["uf"]])
+    ListAdress.append([Adress["cep"],Adress["logradouro"],Adress["complemento"],Adress["uf"]])
 
-for ListAdress in tListAdress:
+for ListAdres in ListAdress:
 
-    print(ListAdress)
+    print(ListAdres)
