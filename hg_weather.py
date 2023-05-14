@@ -6,13 +6,10 @@ url = 'https://api.hgbrasil.com/weather'
 
 captura_campos = []
 
-# Faz a solicitação GET
 response = requests.get(url)
 
-# Verifica o status code da resposta (200 significa que a solicitação foi bem-sucedida)
 if response.status_code == 200:
 
-    # Exibe o conteúdo da resposta
     # print(response.content)
 
     json_all = response.json()
