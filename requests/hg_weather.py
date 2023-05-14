@@ -9,11 +9,9 @@ captura_campos = []
 response = requests.get(url)
 
 if response.status_code == 200:
-
     # print(response.content)
 
     json_all = response.json()
-
     json_principal =  json_all["results"]
     # print(json_principal)
 
